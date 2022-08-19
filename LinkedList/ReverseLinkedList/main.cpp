@@ -67,6 +67,14 @@ void printList(Node *head){
     cout<<endl;
 }
 
+int reverseList(Node *curr , Node *prev){
+    if(curr == NULL) return prev;
+    Node *next  = curr->next;
+    curr->next = prev;
+    reverseList(next,prev);
+
+    }
+
 int main(){
     Node *head = NULL;
     head = InsertAtBegin(head,12);
